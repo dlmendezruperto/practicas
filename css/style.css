@@ -1,0 +1,176 @@
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+body {
+    text-align: left;
+    display: flex;
+}
+#bloque {
+    width: 1000px;
+    margin: 15px auto;
+    text-align: left;
+}
+header, section, footer, aside, nav, article{
+    display: block;
+}
+#cabecera {
+    background: #761baa;
+    padding: 20px;
+    /* Margenes superiores redondeados */
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    text-align: center;
+}
+.titulo1{
+    font-family: Times;
+    font-size: 40px;
+    color: white;
+}
+
+#navegacion {
+    background: #2a1657;
+    text-align: center;
+    /* Margenes inferiores redondeados */
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+#menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#menu ul li{
+    display: inline-block;
+    width: 317px;
+}
+#menu ul li a{
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+}
+#menu ul li a:hover{
+    background-color: #163877;
+}
+
+a{
+    text-decoration: none;
+    font-family: Arial;
+    color: white;
+    font-weight: bold;
+}
+#seccion {
+    float: left;
+    width: 1000px;
+}
+article {
+    position: relative;
+    background: #9a30d8;
+    border-radius: 30px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+/*  EFECTO DE VOLTEO */
+.efecto-volteo-container {
+    display: flex; /* Contenedor flexible */
+    align-items: center;
+}
+
+.efecto-volteo {
+    width: 200px;
+    height: 100px;
+    background-color: rgb(31,25,47);
+    perspective: 1000px;
+    cursor: pointer; /* El cursor se posiciona como elemento interactivo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s, color 0.5s, background-color 0.5s; /* Tiempo que demora el volteo */
+    position: relative;
+    border-radius: 30px;
+    margin: 30px;
+}
+
+.efecto-volteo::before {
+    content: attr(data-texto1); /* Asigna el texto1 */
+    position: absolute;
+    font: Arial;
+    font-size: 15pt;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.efecto-volteo:hover {
+    transform: rotateY(180deg); /* El contenedor gira 180° */
+    color: white;
+    background-color: #163877; /* Cambia el color */
+}
+
+.efecto-volteo:hover::before {
+    content: attr(data-texto2); /* Cambia el texto1 al texto2 */
+    transform: rotateY(180deg);
+    color: white;
+}
+
+.efecto-volteo a {
+    opacity: 0; /*chio: aqui se oculta el link*/
+    transition: opacity 0.5s ease-in-out;
+    transform: rotateY(180deg); /*Chio: aqui se revoltea pa que no se vea el texto inversamente*/
+    text-decoration: none;
+    color: white;
+    font: Arial;
+    font-size: 20pt;
+    font-weight: bold;
+  }
+  
+  .efecto-volteo:hover a {
+    opacity: 1;/*chio: aca se vuelve a ver el link*/
+    color: white;
+    font: Arial;
+    font-size: 20pt;
+    font-weight: bold;
+  }
+/*  */
+
+.titulo2 {
+    font-family: 'Lucida Sans';
+    font-size: 25px;
+    color: black;
+}
+.fotoperfil img{
+    width: 70px;
+    height: 0px;
+}
+.fotoperfil{
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    border: 10px solid white;
+    position: absolute;
+    top: 0; /* Pegar al borde superior del contenedor */
+    left: 0;
+    margin-left: 418px;
+    margin-top: -10%; /* Saca la foto del contenedor hacia arriba */
+}
+h2 {
+    text-align: left;
+    font-family: verdana;
+    font-style: bold;
+    font-size: 30pt;
+    color: white;
+    width: 100%;
+}
+
+
+#pie {
+    clear: both;
+    text-align: center;
+    padding: 20px;
+}
+p{
+    color: rgb(121, 121, 121);
+}
